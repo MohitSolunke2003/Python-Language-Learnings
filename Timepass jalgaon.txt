@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string.h>
+#include<fstring>
+using namespace std;
+
+class Student
+{
+	public:
+		char name;
+		int roll_no;
+		char div;
+		char sex;
+		int year;
+		
+		Student()
+		{
+			cout<<"Enter the name of Student :";
+			cin>>name;
+			cout<<"Enter the Roll no of student :";
+			cin>>roll_no;
+			cout<<"Enter the division of student :";
+			cin>>div;
+			cout<<"Enter the Gender of student :";
+			cin>>sex;
+			cout<<"Enter the Acadmic Year of Student :";
+			cin>>year;
+		}
+		void dispaly_data();
+};
+
+void Student :: dispaly_data()
+{
+	cout<<"Name of Student is :"<<name<<endl;
+	cout<<"Roll no of Student is :"<<roll_no<<endl;
+	cout<<"Division of Student is :"<<div<<endl;
+	cout<<"Gender of Student is :"<<sex;
+	cout<<"Year of Student is :"<<year;
+}
+
+int main()
+{
+	Student A,B,C;
+	A.display_data();
+	B.display_data();		
+	C.display_data();
+
+	return 0;
+}
+	

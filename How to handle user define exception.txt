@@ -1,0 +1,32 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+void Mysqrt(double val)
+{
+    
+    try
+    {
+        if(val<0.0)
+        {
+            throw "Negative";
+        }
+        else
+        {
+            cout<<"The sqrt of "<<val<<" is :"<<sqrt(val)<<endl;
+        }
+    }
+    catch(char *str)
+    {
+        cout<<"can not handle "<<str<<" number"<<endl;
+    }
+}
+int main()
+{
+    int num;
+    cout<<"Enter the value of num :";
+    cin>>num;
+    Mysqrt(num);
+    
+    return 0;
+}

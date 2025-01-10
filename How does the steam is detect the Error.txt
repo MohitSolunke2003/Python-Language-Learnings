@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int val;
+    char ans = 'y';
+    cout<<"Enter the Integer :";
+    cin>>val;
+    
+    if(cin.good() == 0)
+    {
+        cout<<"\nIncorrect Input...!!!";
+        cout<<"\nValue return good() is : "<<cin.good();
+        cin.clear();
+    }
+    else
+    {
+        cout<<"\nCorrect Input...!!!";
+        cout<<"\nThe good() Function returns : "<<cin.good();
+    }
+return 0;
+}
+
+//The Above program will give error msg if non integr value is entered by the user. 

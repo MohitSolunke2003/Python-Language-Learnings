@@ -1,0 +1,16 @@
+Project should be based on API
+ - 1) Google map API 
+ - 2) Weather API
+ - 3) Amazon Review API like twitter and instagram and also realated to covid 19 state API
+
+Project based on Portfolio
+
+* Python Project
+1)Dice Simulator
+2)Rock Paper Sesser 
+3)Reminder application with notification (Medium level)
+4)Desktop Assistent (Expert Level)
+5)Image Editiing App with GUI
+
+
+Bonus Tip ->

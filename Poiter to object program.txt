@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+class test
+{
+    int a;
+    public:
+         test(int b)
+         {
+             a = b;
+         }
+         int getval()
+         {
+             return a;
+         }
+};
+int main()
+{
+    test obj(100),*ptr_obj;
+    ptr_obj = &obj;
+    cout<<"Value obtain using poiter to object is :"<<endl;
+    cout<<ptr_obj ->getval()<<endl;
+    return 0;
+}

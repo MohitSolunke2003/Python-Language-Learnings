@@ -1,0 +1,35 @@
+#include<iostream>
+#include<fstream>
+#include<string.h>
+
+using namespace std;
+
+class Employee
+{
+    public :
+            char name[80];
+            int ID;
+            double salary;
+};
+
+int main()
+{
+    Employee emp1;
+    cout<<"\nEnter the Data to Stream :";
+    strcpy(emp1.name,"Mohit");
+    emp1.ID = 10;
+    emp1.salary = 15000;
+    ofstream fp;
+    fp.open("Mohit.dat",ios::out);
+    fp.write((char*)&emp1,sizeof(emp1));
+    fp.close();
+    cout<<"Reading Data from the stream..."<<endl;
+    Employee emp2;
+    ifstream fin;
+    fin.open("Mohit.dat",ios::in);
+    fin.read((char*)&emp2,sizeof(emp2));
+    cout<<"Name : "<<emp2.name<<endl;
+    cout<<"ID : "<<emp2.ID<<endl;
+    cout<<"Salary : "<<emp2.salary<<endl;
+    fin.close();
+}

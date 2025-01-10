@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+void function(int num)
+{
+    try
+    {
+        if(num)
+        {
+            throw num;
+        }
+        else
+        {
+            throw "value is Zero"; 
+        }
+    }
+    catch(int num)
+    {
+        cout<<"Exception is handled for number : "<<num<<endl;
+        
+    }
+    catch(const char *str)
+    {
+        cout<<"Exception is handled :";
+        cout<<str<<endl;
+    }
+    
+}
+int main()
+{   cout<<"Start"<<endl;
+    function(0);
+    function(1);
+    function(2);
+    function(3);
+    cout<<"End"<<endl;
+    return 0;
+    
+}

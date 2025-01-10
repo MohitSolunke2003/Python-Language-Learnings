@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+void function()
+{
+    try
+    {
+        throw "myworld";
+    }
+    catch(char*)
+    {
+        cout<<"\nInside the catch statement of function";
+        throw;
+    }
+}
+int main()
+{
+    try
+    {
+        function();
+    }
+    catch(char*)
+    {
+        cout<<"\nInside the Catch statement of main ";
+    }
+    return 0;
+    
+}

@@ -1,0 +1,42 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class My_Exception
+{
+    public:
+        int num;
+        char str[50];
+        My_Exception()
+        {
+          *str =0;
+          num=0;
+        }
+        My_Exception(char*s,int i)
+        {
+            strcpy(str,s);
+            num = i;
+        }
+};
+int main()
+{
+    int a;
+    try
+    {
+        cout<<"Enter the number to check : ";
+        cin>>a;
+        if(a<0)
+        {
+            throw My_Exception("Number is negative",a);
+        }
+        else
+          cout<<"Number is positive"<<endl;
+        
+    }
+    catch(My_Exception obj)
+    {
+        cout<<obj.str;
+        cout<<obj.num<<endl;
+    }
+    return 0;
+}

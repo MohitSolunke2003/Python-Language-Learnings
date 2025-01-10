@@ -1,0 +1,67 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class dll
+{
+    public:
+    int data;
+    dll *next,*prev,*head;
+    dll(int data)
+    {
+        this->data =data;
+        this->next = NULL;
+        this->prev = NULL;
+        
+    }
+    
+    void create();
+};
+void dll::create()
+{
+    dll *n1,*last,*temp;
+    char ans ='y';
+    int flag = 0;
+    int val;
+    
+    do
+    {
+        cout<<"\n Enter the Data : ";
+        cin>>val;
+        
+        if(n1==NULL)
+            cout<<"Unable to allocate memory.\n";
+        n1->data=val;
+        n1->next = NULL;
+        n1->prev = NULL;
+        if(flag==0)
+        {
+            temp =n1;
+            last= temp;
+            flag =1;
+        }
+        else
+        {
+            last->next=n1;
+            n1->prev=last;
+            last = n1;
+        }
+        cout<<"\nEnter more ?";
+        ans = getch();
+    }while(ans == 'y'|| ans =='Y');
+    cout<<"\n The list is created";
+    head = temp;
+    getch();
+    
+}
+
+int main()
+{
+    dll*node1=new dll(10);
+    cout<<node1->data<<endl;
+    cout<<node1->next<<endl;
+    cout<<node1->prev<<endl;
+    
+    create();
+    return 0;
+}

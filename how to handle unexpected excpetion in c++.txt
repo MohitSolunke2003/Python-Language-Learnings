@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+void myunexpected()
+{
+    cerr<<"Unexpected Called \n";
+    throw 0;
+}
+void function() throw(int,double)
+{
+    throw("Hello");
+}
+
+int main()
+{
+    set_unexpected(myunexpected);
+    return 0;
+}
